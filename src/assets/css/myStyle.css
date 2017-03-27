@@ -1,0 +1,310 @@
+/*************** Custom Styles *****************/
+
+.jumbotron.vertical-center {
+    margin-bottom: 0; /* Remove the default bottom margin of .jumbotron */
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for vh unit */
+    min-height: 100vh; /* You might also want to use
+                        'height' property instead.
+
+                        Note that for percentage values of
+                        'height' or 'min-height' properties,
+                        the 'height' of the parent element
+                        should be specified explicitly.
+
+                        In this case the parent of '.vertical-center'
+                        is the <body> element */
+
+    /* Make it a flex container */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    /* Align the bootstrap's container vertically */
+    -webkit-box-align : center;
+    -webkit-align-items : center;
+    -moz-box-align : center;
+    -ms-flex-align : center;
+    align-items : center;
+
+    /* In legacy web browsers such as Firefox 9
+       we need to specify the width of the flex container */
+    width: 100%;
+
+    /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+       hence the bootstrap's container won't be aligned to the center anymore.
+
+       Therefore, we should use the following declarations to get it centered again */
+    -webkit-box-pack : center;
+    -moz-box-pack : center;
+    -ms-flex-pack : center;
+    -webkit-justify-content : center;
+    justify-content : center;
+}
+
+.horizontal-center{
+
+    /* Make it a flex container */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    /* Align the bootstrap's container vertically */
+    -webkit-box-align : center;
+    -webkit-align-items : center;
+    -moz-box-align : center;
+    -ms-flex-align : center;
+    align-items : center;
+
+    /* In legacy web browsers such as Firefox 9
+       we need to specify the width of the flex container */
+    width: 100%;
+
+    /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+       hence the bootstrap's container won't be aligned to the center anymore.
+
+       Therefore, we should use the following declarations to get it centered again */
+    -webkit-box-pack : center;
+    -moz-box-pack : center;
+    -ms-flex-pack : center;
+    -webkit-justify-content : center;
+    justify-content : center;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.row-white-txt-default{
+    background-color:#ffffff;
+}
+
+/**** modified ***/
+#headerwrap{
+    background-color: #0a3054;
+    color:#fff;
+}
+#headerwrap.add-bottom-space{
+    padding-bottom:60px;
+}
+#headerwrap .login-logo a{
+    color:#fff;
+}
+
+.navbar-brand{
+    padding:10px;
+}
+.navbar-brand img{
+    max-height:40px !important;
+}
+.navbar-nav > li > a{
+    padding-top:25px;
+    padding-bottom:25px;
+}
+
+.register-box {
+    width: auto;
+}
+
+.bg-white{
+    background-color: #FFFFFF;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+/* MAP STYLE */
+
+.map-place-search-controls {
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+#map-place-search, .map-place-search {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 300px;
+}
+
+.map-latlng-controls{
+    top: auto;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* End MAP STYLE */
+
+.user-info{
+    background-color: #f7f7f7;
+    -webkit-box-shadow: 2px hoff voff blur #999;
+    -moz-box-shadow: 2px hoff voff blur #999;
+    box-shadow: 2px hoff voff blur #999;
+}
+.user-info .row{
+    margin: 2px auto;
+}
+.user-info .row [class^=col-]{
+    padding: 6px;
+}
+.user-info .user-info-value{
+    background-color: #fff;
+}
+
+.complaint-list-map-image{
+    width: 100%;
+}
+.article-info-detail{
+    color: #5e5e5e;
+    font-size: 85%;
+    margin: 5px auto;
+}
+
+/*************   Image instead of radio button   ***************/
+.input-img-container{}
+.input-hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+.input-img-container .input-hidden:checked + label>img {
+    border: 2px solid #000;
+    box-shadow: 0 0 2px 2px #c9cccf;
+}
+
+/* Stuff after this is only to make things more pretty */
+.input-img-container .input-hidden + label>img {
+    border: 1px dashed #444;
+}
+
+.input-img{
+    width: 100%;
+}
+
+/*************   Drag Drop Items   ***************/
+ul.dragdrop-source, ul.dragdrop-target {
+    min-height: 50px;
+    margin: 0px 25px 10px 0px;
+    padding: 2px;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    list-style-type: none;
+    list-style-position: inside;
+}
+ul.dragdrop-source {
+    border-color: #f8e0b1;
+}
+ul.dragdrop-target {
+    border-color: #add38d;
+}
+.dragdrop-source li, .dragdrop-target li {
+    margin: 5px;
+    padding: 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.dragdrop-source li {
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    color: #c09853;
+}
+.dragdrop-target li {
+    background-color: #ebf5e6;
+    border: 1px solid #d6e9c6;
+    color: #468847;
+}
+.sortable-dragging {
+    border-color: #ccc !important;
+    background-color: #fafafa !important;
+    color: #bbb !important;
+}
+.sortable-placeholder {
+    height: 40px;
+
+}
+.dragdrop-source .sortable-placeholder {
+    border: 2px dashed #f8e0b1 !important;
+    background-color: #fefcf5 !important;
+}
+.dragdrop-target .sortable-placeholder {
+    border: 2px dashed #add38d !important;
+    background-color: #f6fbf4 !important;
+}
+
+.box-selection-container .box .overlay{
+    display: none;
+}
+
+.box-selection-container .box:hover .overlay{
+    display: block;
+    cursor: pointer;
+}
+
+/* Step form formatting */
+.wizard > .steps > ul > li{
+    width: auto !important;
+}
+.wizard > .content{
+    background: none !important;
+}
+.wizard > .content > .body{
+    padding: 0 !important;
+}
+
+/* Category icons */
+.item-box{
+    width: 100%;
+    text-align: center;
+}
+.item-box .img-fit{
+    width: 100%;
+    display: block;
+}
+.item-box .img-half{
+    width: 50%;
+    display: table;
+    margin: 0 auto;
+}
+.item-box input + label{
+    padding: 5px;
+    display: block;
+    border: dashed 1px #CCCCCC;
+}
+.item-box input:checked + label{
+    background-color: #f7f7f7;
+}
+.item-box input:checked + label{
+    border: solid 1px #000;
+}
+
+/* bottom align */
+
+.absolute.bottom-align{
+    bottom: 30px;
+}
