@@ -13,7 +13,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
-                    @include('layouts.partial.header.menu')
+                    @if(View::exists('layouts.partial.header.menu'))
+                        @include('layouts.partial.header.menu')
+                    @endif
 
                     @ability('superman,admin', 'global, manage-post')
                     <li class="dropdown">
@@ -29,8 +31,11 @@
                             <li class="divider"></li>
                             <li><a href="{{ route('email.event.templates') }}">@lang('menu.email.templates')</a></li>
                             <li><a href="{{ action('CMS\ContentController@edit', ['id' => 1]) }}">@lang('menu.privacy.change')</a></li>
-                            <li class="divider"></li>
-                            @include('layouts.partial.header.settings')
+
+                            @if(View::exists('layouts.partial.header.settings'))
+                                <li class="divider"></li>
+                                @include('layouts.partial.header.settings')
+                            @endif
                         </ul>
                     </li>
                     @endability
@@ -48,7 +53,9 @@
                             <img src="{{ asset('img/dummyuser.jpg') }}" class="user-image" alt="{{ Auth::user()->name }}"/>
                             <span class="hidden-xs"><b>{{ Auth::user()->name }}</b></span> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            @include('layouts.partial.header.user')
+                            @if(View::exists('layouts.partial.header.user'))
+                                @include('layouts.partial.header.user')
+                            @endif
                             <li class="divider"></li>
                             <li><a href="{{ url('/logout') }}"><strong>@lang('menu.logout')</strong></a></li>
                         </ul>

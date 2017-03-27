@@ -1,14 +1,14 @@
 <!-- REQUIRED JS SCRIPTS -->
 <!-- Slimscroll -->
-<script src="{{ asset('/plugins/slimScroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('/plugins/slimScroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('/js/app.min.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('/js/app.min.js') }}" type="text/javascript"></script>
 <!-- AjaxQ -->
-<script src="{{ asset('/js/ajaxq.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('/js/ajaxq.js') }}" type="text/javascript"></script>
 <!-- Jasny Bootstrap -->
-<script src="{{ asset('js/jasny-bootstrap.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('js/jasny-bootstrap.js') }}" type="text/javascript"></script>
 <!-- Javascript helper -->
-<script src="{{ asset('js/helper.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('js/helper.js') }}" type="text/javascript"></script>
 
 {{-- CKEditor --}}
 {{--<script src="{{ asset('/plugins/ckeditor/ckeditor.js') }}" type="text/javascript"></script>
@@ -18,21 +18,21 @@
 <script src="{{ asset('/plugins/ckeditor/styles.js') }}" type="text/javascript"></script>--}}
 
 {{-- Tiny editor --}}
-<script src="{{ asset('/plugins/tinymce/tinymce.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('/plugins/tinymce/jquery.tinymce.min.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('/plugins/tinymce/tinymce.min.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('/plugins/tinymce/jquery.tinymce.min.js') }}" type="text/javascript"></script>
 
-<script src="{{ asset('plugins/datepicker/bootstrap-datepicker.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('plugins/datepicker/bootstrap-datepicker.js') }}" type="text/javascript"></script>
 
-<script src="{{ asset('plugins/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('plugins/daterangepicker/daterangepicker.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('plugins/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('plugins/daterangepicker/daterangepicker.js') }}" type="text/javascript"></script>
 
-<script src="{{ asset('/plugins/iCheck/icheck.min.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('/plugins/iCheck/icheck.min.js') }}" type="text/javascript"></script>
 
-<script src="{{ asset('/plugins/jtemple/dist/jtemple.min.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('/plugins/jtemple/dist/jtemple.min.js') }}" type="text/javascript"></script>
 <!-- SweetAlert Bootstrap -->
-<script src="{{ asset('/plugins/sweetalert2/sweetalert2.min.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('/plugins/sweetalert2/sweetalert2.min.js') }}" type="text/javascript"></script>
 <!-- Element Stack -->
-<script src="{{ asset('/plugins/elstack/elStack.min.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('/plugins/elstack/elStack.min.js') }}" type="text/javascript"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
       Both of these plugins are recommended to enhance the
@@ -113,5 +113,7 @@
             });
       });
 </script>
-
+@if(View::exists('layouts.partial.footer.script'))
+      @include('layouts.partial.footer.script')
+@endif
 @yield('page_script')
