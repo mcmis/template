@@ -24,7 +24,7 @@
     <link href="{{ ui_asset('/plugins/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- iCheck -->
-    <link href="{{ asset('/plugins/iCheck/square/blue.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ ui_asset('/plugins/iCheck/square/blue.css') }}" rel="stylesheet" type="text/css" />
 
     <link href="{{ ui_asset('/plugins/datepicker/datepicker3.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ ui_asset('/plugins/daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet" type="text/css" />
@@ -44,7 +44,7 @@
     <!-- Bootstrap 3.3.2 JS -->
     <script src="{{ ui_asset('/js/bootstrap.min.js') }}" type="text/javascript"></script>
 
-    @if(View::exists('layouts.partial.scripts'))
-        @include('layouts.partial.scripts')
+    @if(View::exists('layouts.partial.header.scripts'))
+        @include('layouts.partial.header.scripts')
     @endif
 </head>
