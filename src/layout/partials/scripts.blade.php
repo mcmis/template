@@ -113,7 +113,7 @@
             });
       });
 </script>
-@if(View::exists('layouts.partial.footer.script'))
-      @include('layouts.partial.footer.script')
+@if(View::exists('layouts.partial.footer.scripts'))
+      @include('layouts.partial.footer.scripts')
 @endif
 @yield('page_script')
