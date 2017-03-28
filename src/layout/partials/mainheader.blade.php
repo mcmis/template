@@ -50,7 +50,7 @@
                     </li>
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="{{ asset('img/dummyuser.jpg') }}" class="user-image" alt="{{ Auth::user()->name }}"/>
+                            <img src="@if(Auth::user()->avatar()->count() > 0) {{ Auth::user()->avatar()->first()->icon }} @else {{ asset('img/dummyuser.jpg') }} @endif" class="user-image" alt="{{ Auth::user()->name }}"/>
                             <span class="hidden-xs"><b>{{ Auth::user()->name }}</b></span> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             @if(View::exists('layouts.partial.header.user'))
