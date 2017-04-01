@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MCMIS\\Support\\Template\\": "src/"
+            "MCMIS\\Template\\": "src/"
         }
     },
     "extra": {
