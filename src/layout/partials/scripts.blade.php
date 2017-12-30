@@ -22,6 +22,7 @@
 <script src="{{ ui_asset('/plugins/tinymce/jquery.tinymce.min.js') }}" type="text/javascript"></script>
 
 <script src="{{ ui_asset('plugins/datepicker/bootstrap-datepicker.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('plugins/datepicker/locales/bootstrap-datepicker.es.js') }}" type="text/javascript"></script>
 
 <script src="{{ ui_asset('plugins/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
 <script src="{{ ui_asset('plugins/daterangepicker/daterangepicker.js') }}" type="text/javascript"></script>
@@ -56,7 +57,9 @@
                         $('input[type=text]', this).tooltip('show');
                   }
             });
-            $('[data-csfield-type="datepicker"]').datepicker();
+            $('[data-csfield-type="datepicker"]').datepicker({
+				language: 'es'
+            });
             $('[data-csfield-type="daterangepicker"]').daterangepicker();
 
             $('input').not('.icheck-off').iCheck({

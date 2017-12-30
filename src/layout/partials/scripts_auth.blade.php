@@ -6,10 +6,13 @@
 <script src="{{ ui_asset('/plugins/iCheck/icheck.min.js') }}" type="text/javascript"></script>
 
 <script src="{{ ui_asset('plugins/datepicker/bootstrap-datepicker.js') }}" type="text/javascript"></script>
+<script src="{{ ui_asset('plugins/datepicker/locales/bootstrap-datepicker.es.js') }}" type="text/javascript"></script>
 
 <script>
     $(document).ready(function(){
-        $('[data-csfield-type="datepicker"]').datepicker();
+        $('[data-csfield-type="datepicker"]').datepicker({
+			language: 'es'
+        });
 
         $('input').not('.icheck-off').iCheck({
             checkboxClass: 'icheckbox_square-blue',

@@ -29,7 +29,7 @@
                     <table class="table table-bordered table-hover">
                         <thead>
                         <tr>
-                            <th>Event</th>
+                           <!-- <th>Event</th> !-->
                             <th>@lang('common.email_subject')</th>
                             {{--<th>Body</th>--}}
                             <th>@lang('labels.updated_at')</th>
@@ -39,8 +39,8 @@
                         <tbody data-link="row" class="rowlink">
                         @foreach($items as $item)
                             <tr>
-                                <td><a href="{{ route('email.event.template.edit', ['event' => $item->event_alias]) }}">{!! $item->event->title !!}</a></td>
-                                <td>{{ str_limit($item->subject, 55, '...') }}</td>
+                                <!--<td><a href="{{ route('email.event.template.edit', ['event' => $item->event_alias]) }}">{!! $item->event->title !!}</a></td> !-->
+                                <td><a href="{{ route('email.event.template.edit', ['event' => $item->event_alias]) }}">{{ str_limit($item->subject, 55, '...') }}</a></td>
                                 {{--<td>{{ str_limit($item->body, 35, '...') }}</td>--}}
                                 <td>{!! $item->updated_at !!}</td>
                             </tr>
@@ -69,7 +69,7 @@
                 confirmButtonClass: "btn-danger",
                 confirmButtonText: "Yes, delete it!",
                 cancelButtonText: "No, cancel!",
-                closeOnConfirm: false,
+                closeOnConfirm: false
             }).then(
                 function() {
                     $form_obj.submit();
